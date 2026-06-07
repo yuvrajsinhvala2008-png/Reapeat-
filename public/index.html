@@ -1,61 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Reapeat | Book Turfs Faster</title>
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="/">Reapeat</a>
-      <nav aria-label="Primary navigation">
-        <a href="/profile.html">Profile</a>
-        <a href="/admin.html">Admin</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reapeat - Turf Booking Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1>🏟️ Reapeat</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/profile.html">Profile</a></li>
+        <li><a href="/admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <main>
-      <section class="hero">
-        <div>
-          <h1>Book your next turf in minutes.</h1>
-          <p>
-            Discover verified grounds, compare available slots, and keep the Reapeat mobile app ready for faster booking from anywhere.
-          </p>
-          <div class="actions">
-            <button type="button" data-download-app>Download App</button>
-            <a class="button secondary" href="/profile.html">Open Profile</a>
-          </div>
-          <div class="status" data-download-status aria-live="polite"></div>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Reapeat</h1>
+        <p>Book your favorite turf grounds instantly</p>
+        <button class="btn btn-primary" id="downloadBtn">
+          <span class="download-icon">📱</span> Download App
+        </button>
+      </div>
+      <div class="hero-image">
+        <div class="placeholder-image">🏆</div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Why Choose Reapeat?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Easy Booking</h3>
+          <p>Book grounds in just a few taps</p>
         </div>
-        <aside class="card">
-          <h2>Latest APK, no redeploys</h2>
-          <p>
-            The Download App button checks the admin-managed APK URL every time, so users always receive the latest APK after an admin updates the link.
-          </p>
-        </aside>
-      </section>
+        <div class="feature-card">
+          <div class="feature-icon">🗓️</div>
+          <h3>Flexible Schedule</h3>
+          <p>Choose your preferred time slot</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Best Prices</h3>
+          <p>Competitive rates with no hidden charges</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3>Top Rated</h3>
+          <p>Trusted by thousands of users</p>
+        </div>
+      </div>
+    </section>
 
-      <section class="feature-grid" aria-label="Platform highlights">
-        <article class="card">
-          <h2>Available slots</h2>
-          <p>Find convenient playing times and book with fewer steps.</p>
-        </article>
-        <article class="card">
-          <h2>Trusted turfs</h2>
-          <p>Use ratings, verified badges, and booking counts to pick confidently.</p>
-        </article>
-        <article class="card">
-          <h2>Active offers</h2>
-          <p>Spot discounts and promotions before reserving your ground.</p>
-        </article>
-      </section>
-    </main>
+    <section class="download-info">
+      <h2>Get Started Today</h2>
+      <p>Download the Reapeat app and start booking your favorite turf grounds now!</p>
+      <button class="btn btn-primary btn-large" id="downloadBtn2">
+        <span class="download-icon">📱</span> Download Latest APK
+      </button>
+    </section>
+  </main>
 
-    <footer class="site-footer">
-      <span>© Reapeat</span>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Reapeat Platform. All rights reserved.</p>
+      <p>Turf Booking Made Easy</p>
+    </div>
+  </footer>
 
-    <script src="/app.js" defer></script>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>
