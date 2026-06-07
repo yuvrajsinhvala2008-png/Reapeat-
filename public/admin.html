@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin APK Management | Reapeat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Reapeat</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/profile.html">Profile</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h1>APK Download Management</h1>
+        <p>
+          Paste the latest APK download URL below. Homepage and profile Download App buttons will use the saved link immediately, without a code change or redeploy.
+        </p>
+
+        <form data-apk-form>
+          <label for="apk-url">
+            APK Link
+            <input id="apk-url" name="apkUrl" type="url" inputmode="url" placeholder="https://example.com/reapeat-latest.apk" data-apk-input />
+          </label>
+          <button type="submit">Save APK Link</button>
+        </form>
+
+        <p><strong>Current APK link:</strong> <span data-current-apk>Loading...</span></p>
+        <div class="status" data-admin-status aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="/admin.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile | Reapeat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Reapeat</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h1>Your Profile</h1>
+        <p>Manage your bookings and download the latest Reapeat Android app package from your profile.</p>
+        <div class="actions">
+          <button type="button" data-download-app>Download App</button>
+        </div>
+        <div class="status" data-download-status aria-live="polite"></div>
+      </section>
+
+      <section class="profile-grid" aria-label="Profile overview">
+        <article class="card">
+          <h2>Upcoming bookings</h2>
+          <p>Your confirmed turf reservations will appear here.</p>
+        </article>
+        <article class="card">
+          <h2>Saved turfs</h2>
+          <p>Keep your favorite grounds close for quick rebooking.</p>
+        </article>
+        <article class="card">
+          <h2>App access</h2>
+          <p>The profile download button always uses the latest admin-configured APK link.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
