@@ -3,76 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reapeat - Turf Booking Platform</title>
+  <meta name="description" content="REAPEAT is a premium local task marketplace where people post tasks and earn together.">
+  <title>REAPEAT - Post Tasks. Earn Together.</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo">
-        <h1>🏟️ Reapeat</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="/" class="active">Home</a></li>
+  <nav class="navbar glass-nav">
+    <div class="container nav-shell">
+      <a class="brand" href="/" aria-label="REAPEAT home">
+        <span class="brand-mark">R</span>
+        <span>REAPEAT</span>
+      </a>
+      <ul class="nav-links" aria-label="Primary navigation">
+        <li><a href="#marketplace" class="active">Marketplace</a></li>
+        <li><a href="#mobile-app">Mobile App</a></li>
+        <li><a href="#database">Schema</a></li>
+        <li><a href="#website">Website</a></li>
         <li><a href="/profile.html">Profile</a></li>
         <li><a href="/admin.html">Admin</a></li>
       </ul>
+      <button class="btn btn-primary nav-cta" id="downloadBtn">Download App</button>
     </div>
   </nav>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Welcome to Reapeat</h1>
-        <p>Book your favorite turf grounds instantly</p>
-        <button class="btn btn-primary" id="downloadBtn">
-          <span class="download-icon">📱</span> Download App
-        </button>
+  <header class="hero startup-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> Local task marketplace</div>
+        <h1>Post tasks. Earn together.</h1>
+        <p class="hero-subtitle">REAPEAT helps neighborhoods, students, shops, brands and event teams hire verified local workers for short gigs with escrow payments, chat, ratings and AI safety.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="#create-task">Post a Task</a>
+          <a class="btn btn-secondary btn-large" href="#nearby-tasks">Find Work</a>
+        </div>
+        <div class="search-panel glass-card" role="search">
+          <div class="search-field"><span>🔎</span><input type="search" placeholder="Search poster distribution, delivery, survey..."></div>
+          <div class="search-field"><span>📍</span><input type="text" value="Nearby • 5 km" aria-label="Selected location"></div>
+          <button class="btn btn-accent">Search Tasks</button>
+        </div>
+        <div class="trust-row" aria-label="Platform highlights">
+          <span>Escrow protected</span>
+          <span>AI fraud detection</span>
+          <span>Instant withdrawals</span>
+        </div>
       </div>
-      <div class="hero-image">
-        <div class="placeholder-image">🏆</div>
+
+      <div class="hero-product reveal delay-1" id="mobile-app" aria-label="Mobile app preview">
+        <div class="phone-frame">
+          <div class="phone-top"></div>
+          <div class="app-screen">
+            <div class="app-header">
+              <div><small>Good morning</small><strong>Find local gigs</strong></div>
+              <span class="avatar">✓</span>
+            </div>
+            <div class="mini-search">Search nearby tasks</div>
+            <div class="category-scroll">
+              <span>📣 Marketing</span><span>📦 Delivery</span><span>📸 Photo</span>
+            </div>
+            <article class="task-card featured-card">
+              <div class="task-status open">Open</div>
+              <h3>Poster distribution for launch event</h3>
+              <p>Connaught Place • 1.8 km away</p>
+              <div class="task-meta"><span>₹1,800</span><span>Today</span><span>3 hrs</span></div>
+              <button class="btn btn-primary">Apply</button>
+            </article>
+            <div class="wallet-strip"><span>Wallet</span><strong>₹12,450</strong></div>
+          </div>
+        </div>
+        <div class="floating-chip chip-one">AI price estimate ₹1.6k–₹2.1k</div>
+        <div class="floating-chip chip-two">4.9★ verified worker matched</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="marketplace">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span></span> Marketplace UX</p>
+          <h2>Everything creators and workers need in one premium flow.</h2>
+          <p>From OTP onboarding to task proof uploads, REAPEAT is designed for fast local hiring and trustworthy gig completion.</p>
+        </div>
+        <div class="role-grid">
+          <article class="glass-card role-card">
+            <h3>Task Creator</h3>
+            <p>Register, verify phone, post tasks, upload images, set budget, choose location, hire workers, chat, release escrow and rate outcomes.</p>
+            <ul class="check-list"><li>Budget and deadline builder</li><li>Map location picker</li><li>Worker recommendations</li><li>Payment release controls</li></ul>
+          </article>
+          <article class="glass-card role-card accent-card">
+            <h3>Worker</h3>
+            <p>Browse nearby tasks, apply, chat, upload proof, receive payouts, withdraw instantly, review customers and build a verified success score.</p>
+            <ul class="check-list"><li>Nearby search and filters</li><li>Proof-of-work uploads</li><li>Earnings analytics</li><li>Verification badge</li></ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="features">
-      <h2>Why Choose Reapeat?</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Easy Booking</h3>
-          <p>Book grounds in just a few taps</p>
+    <section class="section muted-section" id="nearby-tasks">
+      <div class="container">
+        <div class="section-heading compact"><p class="eyebrow"><span></span> Home feed</p><h2>Featured, nearby, trending and recommended tasks.</h2></div>
+        <div class="homepage-layout">
+          <aside class="quick-actions glass-card">
+            <h3>Quick Actions</h3>
+            <a href="#create-task">＋ Create Task</a><a href="#wallet">💳 Wallet</a><a href="#chat">💬 Chat</a><a href="#support">🎧 Support</a>
+          </aside>
+          <div class="task-grid">
+            <article class="task-card"><div class="task-status open">Open</div><h3>Shop survey in 12 stores</h3><p>Karol Bagh • 2.4 km</p><div class="task-meta"><span>₹2,400</span><span>Tomorrow</span><span>Survey</span></div><button class="btn btn-primary">Apply</button></article>
+            <article class="task-card"><div class="task-status urgent">Urgent</div><h3>Event helper for music night</h3><p>Gurugram • 4.1 km</p><div class="task-meta"><span>₹3,200</span><span>Tonight</span><span>6 people</span></div><button class="btn btn-primary">Apply</button></article>
+            <article class="task-card"><div class="task-status filled">Hiring</div><h3>Product delivery and photos</h3><p>Noida • 3.6 km</p><div class="task-meta"><span>₹1,100</span><span>2 hrs</span><span>Bike</span></div><button class="btn btn-primary">Apply</button></article>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🗓️</div>
-          <h3>Flexible Schedule</h3>
-          <p>Choose your preferred time slot</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💰</div>
-          <h3>Best Prices</h3>
-          <p>Competitive rates with no hidden charges</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⭐</div>
-          <h3>Top Rated</h3>
-          <p>Trusted by thousands of users</p>
+        <div class="category-grid" aria-label="Popular categories">
+          <span>📣 Poster Distribution</span><span>🎪 Event Helper</span><span>🧾 Shop Survey</span><span>📊 Data Collection</span><span>📸 Photography</span><span>📦 Product Delivery</span><span>🧹 Cleaning</span><span>🔧 Installation</span><span>🎓 Student Jobs</span><span>💼 Temporary Jobs</span>
         </div>
       </div>
     </section>
 
-    <section class="download-info">
-      <h2>Get Started Today</h2>
-      <p>Download the Reapeat app and start booking your favorite turf grounds now!</p>
-      <button class="btn btn-primary btn-large" id="downloadBtn2">
-        <span class="download-icon">📱</span> Download Latest APK
-      </button>
+    <section class="section" id="create-task">
+      <div class="container feature-matrix">
+        <div class="section-heading left"><p class="eyebrow"><span></span> Screens & flows</p><h2>Complete product architecture for app, web and operations.</h2></div>
+        <div class="matrix-grid">
+          <article><h3>Mobile screens</h3><p>Splash, login, OTP verification, home, categories, nearby tasks, task details, apply task, create task, chat, wallet, notifications, profile, my tasks, applications, earnings, history, ratings, support and settings.</p></article>
+          <article><h3>Task details</h3><p>Image gallery, description, requirements, payment, skill required, people needed, map, report, chat and apply CTAs with loading skeletons.</p></article>
+          <article id="wallet"><h3>Wallet</h3><p>Available balance, pending balance, withdraw button, transaction history, commission details, UPI, cards, refunds and automatic commission.</p></article>
+          <article id="chat"><h3>Real-time chat</h3><p>Messaging, image sharing, location sharing and system notifications for accepted applications, completion and payment releases.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="database">
+      <div class="container schema-grid">
+        <div>
+          <p class="eyebrow"><span></span> Production backend</p>
+          <h2>Firebase-first data model and AI safeguards.</h2>
+          <p>Firestore collections cover users, tasks, applications, chats, wallet, transactions, ratings, notifications, reports, support tickets and admin settings. Cloud Functions handle escrow, commission, push notifications and fraud signals.</p>
+        </div>
+        <div class="glass-card code-card"><pre><code>users/{userId}
+tasks/{taskId}
+applications/{applicationId}
+chats/{chatId}/messages/{messageId}
+wallets/{userId}/transactions/{transactionId}
+ratings/{ratingId}
+notifications/{notificationId}
+reports/{reportId}
+supportTickets/{ticketId}
+admin/settings</code></pre></div>
+      </div>
+    </section>
+
+    <section class="section" id="admin-dashboard">
+      <div class="container dashboard-preview">
+        <div class="admin-visual glass-card">
+          <div class="chart-bar tall"></div><div class="chart-bar mid"></div><div class="chart-bar high"></div><div class="chart-bar small"></div>
+        </div>
+        <div>
+          <p class="eyebrow"><span></span> Admin dashboard</p>
+          <h2>Manage users, tasks, disputes, payments and growth.</h2>
+          <p>Operational modules include user verification, task moderation, commission settings, payment reviews, reports, analytics, disputes, verification requests and support tickets.</p>
+          <a class="btn btn-primary" href="/admin.html">Open Admin Preview</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="website">
+      <div class="container website-grid">
+        <article><h3>SEO website</h3><p>Landing page, about, how it works, pricing, FAQs, contact, blog, careers, privacy policy and terms pages built for responsive, fast-loading acquisition.</p></article>
+        <article><h3>Premium UI system</h3><p>Material Design 3 inspired tokens, glass cards, floating action buttons, rounded 16–20px surfaces, soft shadows, dark mode readiness and smooth micro-interactions.</p></article>
+        <article><h3>AI features</h3><p>Fake listing detection, spam filtering, worker recommendations, task recommendations, pricing estimates and fraud detection.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-section container">
+      <div class="cta-card">
+        <h2>Ready to launch REAPEAT?</h2>
+        <p>Start with the web preview, then connect Flutter, Firebase Auth, Firestore, Storage, Cloud Functions, Push Notifications and Google Maps.</p>
+        <button class="btn btn-primary btn-large" id="downloadBtn2">Download Latest APK</button>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Reapeat Platform. All rights reserved.</p>
-      <p>Turf Booking Made Easy</p>
+    <div class="container footer-grid">
+      <div><strong>REAPEAT</strong><p>Post Tasks. Earn Together.</p></div>
+      <div><a href="#marketplace">Marketplace</a><a href="#database">Database</a><a href="/admin.html">Admin</a></div>
+      <p>&copy; 2026 REAPEAT. All rights reserved.</p>
     </div>
   </footer>
 
