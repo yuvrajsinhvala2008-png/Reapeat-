@@ -3,98 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Panel - Reapeat</title>
+  <title>REAPEAT Admin Dashboard</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo">
-        <h1>🏟️ Reapeat</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/profile.html">Profile</a></li>
-        <li><a href="/admin.html" class="active">Admin</a></li>
-      </ul>
+  <nav class="navbar glass-nav">
+    <div class="container nav-shell">
+      <a class="brand" href="/"><span class="brand-mark">R</span><span>REAPEAT</span></a>
+      <ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/profile.html">Profile</a></li><li><a href="/admin.html" class="active">Admin</a></li></ul>
+      <a class="btn btn-secondary nav-cta" href="/">View site</a>
     </div>
   </nav>
 
   <main class="container">
-    <div class="admin-container">
-      <section class="admin-header">
-        <h1>🔐 Admin Panel</h1>
-        <p>Manage APK Download Settings</p>
-      </section>
+    <section class="admin-container">
+      <div class="admin-header">
+        <p class="eyebrow"><span></span> Admin dashboard</p>
+        <h1>Operate REAPEAT with trust, payments and analytics.</h1>
+        <p class="hero-subtitle">Manage users, tasks, escrow, commissions, reports, disputes, verification requests and support tickets.</p>
+      </div>
 
-      <section class="admin-card">
-        <h2>APK Link Management</h2>
-        
-        <div class="form-group">
-          <label for="apkUrl">APK Download Link</label>
-          <input
-            type="url"
-            id="apkUrl"
-            placeholder="https://example.com/app.apk"
-            class="form-input"
-            aria-label="APK Download URL"
-          />
-          <small class="form-help">
-            Paste the latest APK download URL here. Users will download the latest version automatically.
-          </small>
-        </div>
-
-        <div class="button-group">
-          <button class="btn btn-primary" id="saveBtn">
-            <span>💾</span> Save APK Link
-          </button>
-          <button class="btn btn-secondary" id="testBtn">
-            <span>🧪</span> Test Download
-          </button>
-        </div>
-
-        <div id="statusMessage" class="status-message"></div>
-      </section>
-
-      <section class="admin-card">
-        <h2>Current Configuration</h2>
-        <div class="config-display">
-          <div class="config-item">
-            <span class="config-label">Current APK URL:</span>
-            <span class="config-value" id="currentUrl">Loading...</span>
+      <div class="admin-grid">
+        <section class="admin-card">
+          <h2>APK Link Management</h2>
+          <div class="form-group">
+            <label for="apkUrl">APK Download Link</label>
+            <input type="url" id="apkUrl" placeholder="https://example.com/reapeat.apk" class="form-input" aria-label="APK Download URL">
+            <small class="form-help">Update the latest Android build without changing code. Homepage and profile buttons fetch this value before redirecting.</small>
           </div>
-          <div class="config-item">
-            <span class="config-label">Last Updated:</span>
-            <span class="config-value" id="updatedAt">Loading...</span>
+          <div class="button-group">
+            <button class="btn btn-primary" id="saveBtn"><span>💾</span> Save APK Link</button>
+            <button class="btn btn-secondary" id="testBtn"><span>🧪</span> Test Download</button>
           </div>
-          <div class="config-item">
-            <span class="config-label">Status:</span>
-            <span class="config-value" id="urlStatus">
-              <span class="status-badge" id="statusBadge">Checking...</span>
-            </span>
-          </div>
-        </div>
-      </section>
+          <div id="statusMessage" class="status-message"></div>
+        </section>
 
-      <section class="admin-card info-card">
-        <h2>ℹ️ How It Works</h2>
-        <ol class="info-list">
-          <li>Paste the latest APK download URL in the field above</li>
-          <li>Click "Save APK Link" to store it</li>
-          <li>Users can click "Download App" on homepage or profile</li>
-          <li>They will automatically download the latest APK</li>
-          <li>Next time you update the APK, just paste the new URL - no code changes needed!</li>
-        </ol>
-      </section>
-    </div>
+        <section class="admin-card">
+          <h2>Current Configuration</h2>
+          <div class="config-display">
+            <div class="config-item"><span class="config-label">Current APK URL</span><span class="config-value" id="currentUrl">Loading...</span></div>
+            <div class="config-item"><span class="config-label">Last Updated</span><span class="config-value" id="updatedAt">Loading...</span></div>
+            <div class="config-item"><span class="config-label">Status</span><span class="config-value" id="urlStatus"><span class="status-badge" id="statusBadge">Checking...</span></span></div>
+          </div>
+        </section>
+
+        <section class="admin-card">
+          <h2>Operations modules</h2>
+          <div class="category-grid"><span>👥 Users</span><span>🧾 Tasks</span><span>💳 Payments</span><span>📈 Analytics</span><span>⚖️ Disputes</span><span>🎧 Support</span><span>🛡️ AI Fraud</span><span>✅ Verification</span></div>
+        </section>
+
+        <section class="admin-card">
+          <h2>Commission settings</h2>
+          <p class="activity-description">Escrow payment, automatic commission, refunds and instant withdrawal rules are modeled for Cloud Functions integration.</p>
+          <div class="wallet-strip"><span>Platform commission</span><strong>12%</strong></div>
+          <div class="wallet-strip"><span>Fraud risk queue</span><strong>18</strong></div>
+        </section>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Reapeat Platform. All rights reserved.</p>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container footer-grid"><strong>REAPEAT Admin</strong><p>&copy; 2026 REAPEAT. All rights reserved.</p></div></footer>
   <script src="admin.js"></script>
 </body>
 </html>

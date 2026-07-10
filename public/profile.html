@@ -3,97 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile - Reapeat</title>
+  <title>REAPEAT Profile - Worker & Creator Hub</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo">
-        <h1>🏟️ Reapeat</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/profile.html" class="active">Profile</a></li>
-        <li><a href="/admin.html">Admin</a></li>
-      </ul>
+  <nav class="navbar glass-nav">
+    <div class="container nav-shell">
+      <a class="brand" href="/"><span class="brand-mark">R</span><span>REAPEAT</span></a>
+      <ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/profile.html" class="active">Profile</a></li><li><a href="/admin.html">Admin</a></li></ul>
+      <button class="btn btn-primary nav-cta" id="downloadBtnProfile">Download App</button>
     </div>
   </nav>
 
   <main class="container">
-    <div class="profile-container">
-      <section class="profile-header">
-        <div class="profile-avatar">👤</div>
-        <div class="profile-info">
-          <h1>John Doe</h1>
-          <p class="email">john.doe@example.com</p>
-          <p class="member-since">Member since 2024</p>
-        </div>
-      </section>
+    <section class="profile-container">
+      <div class="profile-hero">
+        <p class="eyebrow"><span></span> User workspace</p>
+        <h1>Creator and worker command center.</h1>
+        <p class="hero-subtitle">Manage tasks, applications, wallet, ratings, proof uploads and support from a single premium dashboard.</p>
+      </div>
 
-      <section class="profile-stats">
-        <div class="stat-card">
-          <div class="stat-number">24</div>
-          <div class="stat-label">Bookings</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">4.8</div>
-          <div class="stat-label">Rating</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">12</div>
-          <div class="stat-label">Favorites</div>
-        </div>
-      </section>
+      <div class="profile-grid">
+        <article class="profile-card">
+          <div class="app-header">
+            <div><small>Verified member</small><h3>Aarav Sharma</h3><p class="activity-description">Delhi NCR • Phone verified • KYC pending</p></div>
+            <span class="avatar">✓</span>
+          </div>
+          <div class="profile-stats">
+            <div class="stat-card"><div class="stat-number">48</div><div class="stat-label">Completed</div></div>
+            <div class="stat-card"><div class="stat-number">4.9</div><div class="stat-label">Rating</div></div>
+            <div class="stat-card"><div class="stat-number">96%</div><div class="stat-label">Success</div></div>
+          </div>
+        </article>
 
-      <section class="profile-actions">
-        <h2>Actions</h2>
-        <button class="btn btn-primary" id="downloadBtnProfile">
-          <span class="download-icon">📱</span> Download App
-        </button>
-        <button class="btn btn-secondary">Edit Profile</button>
-        <button class="btn btn-secondary">My Bookings</button>
-        <button class="btn btn-secondary">Favorites</button>
-      </section>
+        <article class="profile-card" id="wallet-preview">
+          <h3>Wallet & earnings</h3>
+          <div class="wallet-strip"><span>Available balance</span><strong>₹12,450</strong></div>
+          <div class="config-item"><span class="config-label">Pending escrow</span><strong>₹3,800</strong></div>
+          <button class="btn btn-primary">Withdraw Money</button>
+          <button class="btn btn-secondary">View Transactions</button>
+        </article>
 
-      <section class="profile-section">
-        <h2>Recent Activity</h2>
-        <div class="activity-list">
-          <div class="activity-item">
-            <div class="activity-icon">✅</div>
-            <div class="activity-content">
-              <p class="activity-title">Booking Confirmed</p>
-              <p class="activity-description">Football Ground - Sunday, 4:00 PM</p>
-              <p class="activity-time">2 days ago</p>
-            </div>
+        <article class="profile-card">
+          <h3>My tasks</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span>📣</span><div><p class="activity-title">Poster distribution</p><p class="activity-description">3 applicants • deadline today</p></div></div>
+            <div class="activity-item"><span>📦</span><div><p class="activity-title">Product delivery</p><p class="activity-description">Worker hired • proof pending</p></div></div>
+            <div class="activity-item"><span>🧹</span><div><p class="activity-title">Store cleaning</p><p class="activity-description">Completed • payment released</p></div></div>
           </div>
-          <div class="activity-item">
-            <div class="activity-icon">💬</div>
-            <div class="activity-content">
-              <p class="activity-title">Review Added</p>
-              <p class="activity-description">5 stars - Great experience!</p>
-              <p class="activity-time">1 week ago</p>
-            </div>
+        </article>
+
+        <article class="profile-card">
+          <h3>My applications</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span>✅</span><div><p class="activity-title">Application accepted</p><p class="activity-description">Event helper • chat opened</p></div></div>
+            <div class="activity-item"><span>⏳</span><div><p class="activity-title">Review pending</p><p class="activity-description">Shop survey • 2 hours ago</p></div></div>
+            <div class="activity-item"><span>⭐</span><div><p class="activity-title">New rating</p><p class="activity-description">5 stars for data collection</p></div></div>
           </div>
-          <div class="activity-item">
-            <div class="activity-icon">⭐</div>
-            <div class="activity-content">
-              <p class="activity-title">Added to Favorites</p>
-              <p class="activity-description">Premium Turf Center</p>
-              <p class="activity-time">2 weeks ago</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        </article>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Reapeat Platform. All rights reserved.</p>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container footer-grid"><strong>REAPEAT</strong><p>Post Tasks. Earn Together.</p></div></footer>
   <script src="app.js"></script>
 </body>
 </html>
